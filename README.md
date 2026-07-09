@@ -32,11 +32,11 @@ streamlit run app_strategy.py
 
 File map
 ---
-- `schemas.py` — Pydantic contracts and `GraphState` definition
-- `engine.py` — multi-agent orchestrator, nodes and the `run_credit_shield` state-machine
-- `knowledge_base.py` — ChromaDB + LlamaIndex initialization (uses lightweight mock embeddings by default)
-- `app_strategy.py` — Streamlit dashboard to run and visualize the multi-agent flow
-- `requirements.txt`, `.gitignore` — environment and repo hygiene
+- `schemas.py` - Pydantic contracts and `GraphState` definition
+- `engine.py` - multi-agent orchestrator, nodes and the `run_credit_shield` state-machine
+- `knowledge_base.py` - ChromaDB + LlamaIndex initialization (uses lightweight mock embeddings by default)
+- `app_strategy.py` - Streamlit dashboard to run and visualize the multi-agent flow
+- `requirements.txt`, `.gitignore` - environment and repo hygiene
 
 Contributing / Notes
 ---

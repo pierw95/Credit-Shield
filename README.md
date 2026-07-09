@@ -2,9 +2,9 @@
 
 A lightweight, deterministic multi-agent orchestration demo optimized for resource-constrained devices (Chromebook). The system simulates three cooperating nodes:
 
-- Analyst Agent — retrieval from a local LlamaIndex + ChromaDB knowledge base (semantic retrieval, PII detection)
-- Auditor Agent — structured financial metrics provider (Pydantic contracts simulating MCP/dbt)
-- Judge Agent — deterministic validator enforcing safety and compliance, driving *Reflexion Retries* when policy violations occur
+- Analyst Agent: retrieval from a local LlamaIndex + ChromaDB knowledge base (semantic retrieval, PII detection)
+- Auditor Agent: structured financial metrics provider (Pydantic contracts simulating MCP/dbt)
+- Judge Agent: deterministic validator enforcing safety and compliance, driving *Reflexion Retries* when policy violations occur
 
 Streamlit
 ---

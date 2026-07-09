@@ -8,7 +8,9 @@ A lightweight, deterministic multi-agent orchestration demo optimized for resour
 
 Screenshot
 ---
-(Place your Streamlit screenshots in `screenshots/` and reference them here.)
+<p align="center">
+  <img src="dashboard.png" alt="CreditShield Dashboard" width="800">
+</p>
 
 Architecture Flow
 ---

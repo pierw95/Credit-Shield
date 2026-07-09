@@ -22,8 +22,8 @@ Architecture Flow
 Quickstart
 ---
 ```bash
-git clone <repo>
-cd <repo>
+git clone https://github.com/pierw95/Credit-Shield.git
+cd Credit-Shield
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

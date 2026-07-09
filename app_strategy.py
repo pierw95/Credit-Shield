@@ -1,6 +1,6 @@
 import streamlit as st
 from schemas import GraphState
-from engine import analyst_node, auditor_node, judge_node, run_credit_shield
+from engine import analyst_node, auditor_node, judge_node
 
 st.set_page_config(page_title="Credit Shield Orchestrator", layout="wide")
 st.title("Credit Shield — Multi-Agent Orchestrator")
@@ -27,7 +27,8 @@ def render_agent_box(container, title, content_lines):
 if run_btn:
     state = GraphState(query=user_query)
 
-    # Visual progress bar across nodes
+    # NOTE: questa UI visualizza il loop di orchestrazione passo dopo passo per demo.
+    # In produzione il core orchestratore dovrebbe eseguire solo run_credit_shield(user_query)
     progress = st.progress(0)
     attempt = 0
     while not state.judge_approved and attempt <= max_retries:

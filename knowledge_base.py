@@ -1,27 +1,7 @@
 import chromadb
 from llama_index.core import Document, VectorStoreIndex, StorageContext
+from llama_index.core.embeddings import MockEmbedding
 from llama_index.vector_stores.chroma import ChromaVectorStore
-from typing import List
-
-
-# Minimal, deterministic mock embeddings to avoid heavy external models
-class MockEmbeddings:
-    def __init__(self, dim: int = 8):
-        self.dim = dim
-
-    def _text_to_vector(self, text: str) -> List[float]:
-        h = abs(hash(text))
-        vec = []
-        for i in range(self.dim):
-            # deterministic pseudo-random but lightweight
-            vec.append(((h >> (i * 4)) & 0xFF) / 255.0)
-        return vec
-
-    def embed_documents(self, texts: List[str]) -> List[List[float]]:
-        return [self._text_to_vector(t) for t in texts]
-
-    def embed_query(self, text: str) -> List[float]:
-        return self._text_to_vector(text)
 
 def initialize_local_db():
     print("📦 [Infrastruttura] Inizializzazione ChromaDB locale in corso...")
@@ -50,9 +30,8 @@ def initialize_local_db():
     ]
     
     # Costruiamo l'indice (LlamaIndex gestirà i nodi)
-    # Utilizza un modello di embedding di default leggerissimo per la manipolazione strutturata
-    # Usa un modello di embedding locale leggero (mock) per Chromebook
-    mock_embed = MockEmbeddings(dim=8)
+    # Utilizza il MockEmbedding nativo di LlamaIndex per mantenere il flusso leggero
+    mock_embed = MockEmbedding(embed_dim=384)
     index = VectorStoreIndex.from_documents(
         documents, storage_context=storage_context, embed_model=mock_embed
     )

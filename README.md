@@ -41,7 +41,7 @@ File map
 Contributing / Notes
 ---
 - Do not commit `chroma_db/` or `venv/` (already ignored).
-- Replace the placeholder screenshots in `screenshots/` before publishing for best presentation.
+- Replace the placeholder image streamlit before publishing for best presentation.
 - The repository is intentionally lightweight: embeddings use a deterministic mock by default to avoid heavy model downloads on Chromebooks.
 
 License

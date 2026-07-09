@@ -1,4 +1,4 @@
-# CreditShield OS — Deterministic Multi-Agent Orchestrator for Credit Risk Compliance
+# CreditShield OS; Deterministic Multi-Agent Orchestrator for Credit Risk Compliance
 
 A lightweight, deterministic multi-agent orchestration demo optimized for resource-constrained devices (Chromebook). The system simulates three cooperating nodes:
 
@@ -6,11 +6,6 @@ A lightweight, deterministic multi-agent orchestration demo optimized for resour
 - Auditor Agent — structured financial metrics provider (Pydantic contracts simulating MCP/dbt)
 - Judge Agent — deterministic validator enforcing safety and compliance, driving *Reflexion Retries* when policy violations occur
 
-Screenshot
----
-<p align="center">
-  <img src="dashboard.png" alt="CreditShield Dashboard" width="800">
-</p>
 
 Architecture Flow
 ---
